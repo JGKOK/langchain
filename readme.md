@@ -16,7 +16,7 @@
 ```shell
   uname -a
 ```
-如果显示x86_64，则前往该地址https://github.com/ollama/ollama/releases，直接下载 ollama-linux-amd64.tgz，如果显示arm字样，则下载 ollama-linux-amd64-rocm.tgz  
+如果显示x86_64，则前往该地址https://github.com/ollama/ollama/releases 下载ollama-linux-amd64.tgz，如果显示arm字样，则下载 ollama-linux-amd64-rocm.tgz  
 2.下载完成后，解压对应安装包
 ```shell
   tar -C /usr -xzf ollama-linux-amd64-0.6.2.tgz
