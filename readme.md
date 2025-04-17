@@ -16,7 +16,7 @@
 ```shell
   uname -a
 ```
-如果显示x86_64，则前往该地址https://github.com/ollama/ollama/releases 下载ollama-linux-amd64.tgz，如果显示arm字样，则下载 ollama-linux-amd64-rocm.tgz  
+如果显示x86_64，则前往该地址https://github.com/ollama/ollama/releases，直接下载 ollama-linux-amd64.tgz，如果显示arm字样，则下载 ollama-linux-amd64-rocm.tgz  
 2.下载完成后，解压对应安装包
 ```shell
   tar -C /usr -xzf ollama-linux-amd64-0.6.2.tgz
@@ -68,4 +68,21 @@ WantedBy=default.target
 1. /doc文件存放训练使用的文档，支持pdf、docx、doc、txt
 2. my_rag_history.py主程序运行
 3. post_test.py测试API接口调用
+
+8.启动准备
+1.ollama启动模型
+```shell
+  ollama list
+```
+确认模型nomic-embed-text:latest（文件向量存储）和deepseek-r1:8b（推理模型）已经运行
+
+```shell
+  #运行deepseek
+  ollama run deepseek-r1:8b
+  #运行nomic-embed-text:latest
+  ollama pull nomic-embed-text
+  #运行结果确认
+  ollama list
+```
+确认docker已经运行redis
     
